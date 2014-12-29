@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+	<head>
+
+
+		<title>those open decisions... </title>
+
+		<script src="libraries/jquery/v1ptSomething/jquery-1.11.1.js" charset="utf-8"></script>
+
+		<!-- ////  the icons  //// -->
+
+		<!-- local storeage -->
+		<link rel="stylesheet" href="libraries/font-awesome-4.2.0/css/font-awesome.min.css">
+		<!--  CDN link to the icons
+			<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		-->
+
+
+		<style type="text/css">
+
+
+			body{
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;				
+				font-family: "Open Sans", sans-serif;
+				background-color: rgb( 255, 255, 250);
+				color: rgb( 140, 81, 16);
+				font-size: 16px;
+			}	
+
+
+			/* -- header things -- */
+
+			#page_header__fixed{
+				position: fixed;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				min-height: 105px;
+				background-color: rgb( 250, 250, 235);
+				z-index: 5;
+			}
+
+			#page_header__main_text_area{
+				position: relative;
+				left: 0px;
+				top: 0px;
+				margin: 20px;
+				margin-right: 65px;				
+				font-size: 16px;
+				font-weight: 600;
+				color: rgb( 102, 36, 0);
+			}
+
+			#page_header__issue_text_markup{
+				color: rgb( 140, 81, 16 );
+				font-weight: 400;
+				margin-right: ;
+			}
+
+			#page_header__menu_button_box{
+				position: absolute;
+				right:0px;
+				top: 0px;
+				width: 50px;
+				height: 100%;
+				background-color: rgb( 180, 128, 128);
+				z-index: 15;
+			}
+
+
+			#page_div_outer_outer{
+				position: absolute;
+				/* display: none; */
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				min-height: 100%;
+			}	
+
+
+
+			/* -- header : drop down menu -- */
+
+			#menu__drop_down_menu__outer_outer_area{
+				display: none;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+			}
+
+			#menu__actual_menu_area{
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;	
+				display: block;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				width: auto;
+				height: auto;
+				padding: 30px;
+				padding-right: 70px;
+				/* padding-bottom: 30px; */
+				color: white;
+				background-color: rgba( 100, 0, 0, 0.75 );
+				z-index: 10;
+			}
+
+			#menu_item__menu_title{
+				font-weight: 600;
+				border-bottom: 1px solid white;				
+			}
+
+			.general_menu_item{
+				font-size: 22px;				
+				margin: 20px;
+				margin-bottom: 40px;
+			}
+
+			#menu__click_to_close_menu_area__behind_slide_out_menu_area{
+				position: fixed;
+				top: 0px;
+				right: 0px;
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(255, 128, 128, 0.0 );
+				z-index: 9;
+			}
+
+
+
+			/* change link decorations please, of the menu items, please */
+
+			#menu__drop_down_menu__outer_outer_area a:link{
+			    text-decoration: none;
+			    color: white;
+			}
+
+			#menu__drop_down_menu__outer_outer_area a:visited {
+			    text-decoration: none;
+			    color: white;
+			}
+
+			#menu__drop_down_menu__outer_outer_area a:hover {
+			    text-decoration: none;
+			    color: white;
+			}
+
+			#menu__drop_down_menu__outer_outer_area a:active {
+			    text-decoration: none;
+			    color: white;
+			}
+
+
+
+
+
+			/* -- meetings listing things -- */
+
+
+			#meeting_listing_header{
+				position: relative;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				height: 55px;
+			}
+
+			#meeting_listing_header__start_txt_n_arrow__outer_div{
+				margin-top: 162px;
+				width: 70px;
+				height: 61px;
+				margin-left: auto;
+				margin-right: auto;
+				font-size: 16px;
+				color: rgb( 140, 81, 16 );
+				text-align: center;
+			}
+
+
+			#meeting_listing_header__start_txt_n_WITHOUT_arrow__outer_div{
+				margin-top: 162px;
+				/* width: 80px; */
+				/* height: 61px; */
+				margin-left: auto;
+				margin-right: auto;
+				font-size: 16px;
+				color: rgb( 140, 81, 16 );
+				text-align: center;
+			}
+
+			#meeting_listing_header__start_txt_n_WITHOUT_arrow__outer_div span{
+				border-bottom: 1px solid rgb( 140, 81, 16 );
+			}
+
+
+			#meeting_listing_header__arrow_inner_div{
+				width: 41px;
+				height: 37px;
+				margin-left: auto;
+				margin-right: auto;
+				background-image: url( images/listings_header_arrow_down.svg );
+				background-repeat: no-repeat;
+			}
+
+
+			#meetings_listing_outer_area{
+				position: relative;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				min-height: 200px;
+			}
+
+			.individual_meetings_listing__outer_area{
+				position: relative;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				min-height: 88px;
+				border-bottom: 1px solid rgb( 217, 217, 174);				
+			}
+
+			.individual_meetings_listing__outer_area:first-child{
+				border-top: 1px solid rgb( 217, 217, 174);
+			}
+
+
+			.individual_meetings_listing__inner_text_area{
+				position: relative;
+				margin-left: auto;
+				margin-right: auto;
+				top: 27px;
+				min-width: 200px;
+				max-width: 452px;
+				min-height: 100px;
+				font-weight: 400;
+			}
+
+			.inner_inner_meeting_div_text_area{
+				position: relative;
+				top: 3px;
+				float: left;
+			}
+
+
+			#meeting_listing_footer{
+				position: relative;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				height: 168px;
+			}
+
+			#meeting_listing_footer__start_txt_n_arrow__outer_div{
+				position: relative;
+				margin-top: 40px;
+				width: 70px;
+				height: 61px;
+				margin-left: auto;
+				margin-right: auto;
+				font-size: 16px;
+				color: rgb( 140, 81, 16 );
+				text-align: center;
+			}
+
+			#meeting_listing_footer__arrow_up_inner_div{
+				width: 41px;
+				height: 37px;
+				margin-left: auto;
+				margin-right: auto;
+				background-image: url( images/listings_header_arrow_up.svg );
+				background-repeat: no-repeat;
+			}
+
+
+
+			.bolder_text_weight{
+				font-weight: 600;
+			}
+
+			.individual_meetings_listing__inner_arrowRight{
+				position: absolute;
+				top: 40px;
+				right: 24px;
+				width: 26px;
+				height: 90px;
+				background-image: url( images/individual_listing__arrow_right.svg );
+			}
+
+			.individual_meetings_listing__inner_arrowDown{
+				position: absolute;
+				bottom: 0px;
+				margin-left: auto;
+				margin-right: auto;
+				width: 14px;
+				height: 21px;
+				background-image: url( images/individual_listing__arrow_down.svg );
+			}
+
+
+
+			.resolution_icon{
+				position: relative;
+				float: left;
+				margin-right: 20px;
+			}
+
+
+			/* change link decorations please, on the meetings listing area, please */
+			#meetings_listing_outer_area a:link {
+			    text-decoration: none;
+			    color: rgb( 140, 81, 16 );
+			}
+
+			#meetings_listing_outer_area a:visited {
+			    text-decoration: none;
+			    color: rgb( 140, 81, 16 );
+			}
+
+			#meetings_listing_outer_area a:hover {
+			    text-decoration: none;
+			    color: rgb( 140, 81, 16 );
+			}
+
+			#meetings_listing_outer_area a:active {
+			    text-decoration: none;
+			    color: rgb( 140, 81, 16 );
+			}
+
+
+
+
+			/* --- icon explanation area --- */
+
+			#icon_explanation_area__outer_outer{
+				display: block;
+				position: fixed;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				height: 100%;
+				background-color: rgba( 250, 250, 230, 0.5);
+				z-index: 20;
+			}
+
+			#icon_explanation_area__enclosure_of_header_and_icon_explanation_listing{
+
+			}
+
+			#icon_explanation_area__header_outer{
+
+			}
+
+			#icon_explanation_area__header_outer__header_txt_area{
+
+			}
+
+			#icon_explanation_area__header_outer__header__close_button{
+				position: fixed;
+				right: 0px;
+				top: 0px;
+				width: 50px;
+				height: 50px;
+				background-image: url( images/symbols_explanation_page__close_box.svg );
+				background-color: rgb( 250, 250, 230);
+				border: 1px solid rgb( 150, 150, 130);
+			}
+
+			#icon_explanation_area__actual_icon_explanation_area_outer{
+
+			}
+
+			.individual_icon_explanation_entry__outer{
+				
+			}
+
+
+
+
+
+
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<script type="text/javascript">
+
+			// hellow!
+			console.log("hellow world!");
+
+			/// just a  place to store data
+			var issue_data_ ; 
+
+
+
+
+
+			//// function to dissect urls
+			//
+			$.urlParam = function(name){
+			    var results = new RegExp('[\?&amp;]' + name + '=([^&amp;#]*)').exec(window.location.href);
+			    return results[1] || 0;
+			}
+
+
+
+			//////// 
+
+			this.mobile_interface = function(){
+
+
+				/* ----  parameters   --- */
+
+
+				/* ---- issue num?! --- */
+
+				this.curr_issue_num = " -?-?-?-?-?-?";
+
+				/* ----  data --- */				
+
+				this.issue_data_ ;
+
+
+				/* ---- string/language dictionary --- */
+
+				this.strings_dictionary_multilinguial = {};
+
+				// just some variables pointing at relevant languages
+				this.dictionary_reference_for__language__finnish = "fi";
+				this.dictionary_reference_for__language__english = "en";
+				this.dictionary_reference_for__language__swedish = "se";
+
+				// which language is currently used?
+				this.current_language_code = this.dictionary_reference_for__language__finnish;
+				// what's the default language
+				this.current_language_code__default_language = this.dictionary_reference_for__language__finnish;
+
+				// language parameter/key in the url 
+				this.language_url_in_the_url = "lang";
+
+
+				/* ----  various lookups  */
+
+				this.policymaker_data_ ; 
+
+
+				/// Meanings of reoslution codes
+				//		- in Finnish/English
+				//		- in Icons
+
+				/// the resolutions meanings in English
+				this.RESOLUTIONS_EN = {
+				    'PASSED': 'Passed as drafted',
+				    'PASSED_VOTED': 'Passed after a vote',
+				    'PASSED_REVISED': 'Passed revised by presenter',
+				    'PASSED_MODIFIED': 'Passed modified',
+				    'REJECTED': 'Rejected',
+				    'NOTED': 'Noted as informational',
+				    'RETURNED': 'Returned to preparation',
+				    'REMOVED': 'Removed from agenda',
+				    'TABLED': 'Tabled',
+				    'ELECTION': 'Election',
+				};
+
+				//  the reoslutions in Finnish
+				this.RESOLUTIONS_FI = {
+				    'PASSED': 'Ehdotuksen mukaan',
+				    'PASSED_VOTED': 'Ehdotuksen mukaan äänestyksin',
+				    'PASSED_REVISED': 'Esittelijän muutetun ehdotuksen mukaan',
+				    'PASSED_MODIFIED': 'Esittelijän ehdotuksesta poiketen',
+				    'REJECTED': 'Hylättiin',
+				    'NOTED': 'Merkittiin tiedoksi',
+				    'RETURNED': 'Palautettiin',
+				    'REMOVED': 'Poistettiin',
+				    'TABLED': 'Jätettiin pöydälle',
+				    'ELECTION': 'Vaali'
+				};
+
+				//  the reoslutions in Swedish
+				this.RESOLUTIONS_SE = {
+				    'PASSED': 'Godtagen utan ändring',
+				    'PASSED_VOTED': 'Godtagen efter röstning',
+				    'PASSED_REVISED': 'Godtagen med ändringar från "[presenter]"',
+				    'PASSED_MODIFIED': 'Godtagen med ändringar',
+				    'REJECTED': 'Nedröstad',
+				    'NOTED': 'Noterad som upplysningsfull',
+				    'RETURNED': 'Skickad åter till preparation',
+				    'REMOVED': 'Borttagen från agendan',
+				    'TABLED': 'Bordlagd',
+				    'ELECTION': 'Val'
+				};
+
+
+				//// the resolution explanations as a associative array
+				//		- simply an associative array of the icon exlanation texts above
+				this.resolution_explanation_texts_as_multilinguial_dictionary = {};
+				this.resolution_explanation_texts_as_multilinguial_dictionary[ this.dictionary_reference_for__language__finnish ] = this.RESOLUTIONS_FI ;
+				this.resolution_explanation_texts_as_multilinguial_dictionary[ this.dictionary_reference_for__language__english ] = this.RESOLUTIONS_EN ;
+				this.resolution_explanation_texts_as_multilinguial_dictionary[ this.dictionary_reference_for__language__swedish ] = this.RESOLUTIONS_SE ;
+
+
+				/// Associative array for the icons
+				this.RESOLUTIONS_ICONS = {
+				    'PASSED': 'check',
+				    'PASSED_VOTED': 'hand-o-up',
+				    'PASSED_REVISED': 'check-circle-o',
+				    'PASSED_MODIFIED': 'check-circle',
+				    'REJECTED': 'trash-o',
+				    'NOTED': 'exclamation-circle',
+				    'RETURNED': 'repeat',
+				    'REMOVED': 'times',
+				    'TABLED': 'inbox',
+				    'ELECTION': 'group',
+				    'null' : "question",
+				    'undefined' : "question",
+			     };
+
+
+			     /// policymaker icons
+			     this.POLICYMAKERS_icons = 
+				{
+				    'Aslk': 'home',
+				    'Asuntk': 'home',
+				    'Zoojk': 'bug',
+				    'Oivajk': 'group',
+				    'Koja': 'briefcase',
+				    'Sote': 'medkit',
+				    'Khs': 'legal',
+				    'Museojk': 'asterisk',
+				    'Kvsto': 'microphone',
+				    'Kslk': 'eraser',
+				    'Kvlk': 'ticket',
+				    'Klk': 'building-o',
+				    'Kklk': 'picture-o',
+				    'HKLjk': 'road',
+				    'LILK': 'trophy',
+				    'Nlk': 'smile-o',
+				    'SKJ': 'pencil',
+				    'OLK': 'pencil',
+				    'Palmiajk': 'leaf',
+				    'PELK': 'fire-extinguisher',
+				    'Sotelk': 'medkit',
+				    'Soslk': 'heart',
+				    'Stojk': 'book',
+				    'Taimujk': 'asterisk',
+				    'Talpajk': 'euro',
+				    'Talk': 'eye',
+				    'Tija': 'laptop',
+				    'Tplk': 'cog',
+				    'Tervlk': 'user-md',
+				    'Vakalk': 'puzzle-piece',
+				    'Ytlk': 'wrench',
+				    'Ylk': 'leaf'
+				    }
+
+
+
+
+			    ///// a manually made list of the resolution types
+			    //		- it's made manually such that the order is not random
+			    this.resolution_types__as_linear_list = [ "PASSED", "PASSED_VOTED", "PASSED_REVISED", "PASSED_MODIFIED", "REJECTED", "NOTED", "RETURNED", "REMOVED", "TABLED", "ELECTION" ];
+
+
+
+				/* ============   METHODS    ========== */
+				/* ============   METHODS    ========== */
+				/* ============   METHODS    ========== */
+
+
+
+				this.set_up_basic_page = function( root_this_ ){
+
+					// 
+					console.log(">>>> set_up_basic_page");
+
+					// the page header
+					$( "body" ).append("<div id='"+"page_header__fixed"+"'><div id='page_header__main_text_area'><span id='page_header__issue_text_markup'>"+root_this_.strings_dictionary_multilinguial[ root_this_.current_language_code ].issue+" #"+root_this_.curr_issue_num+"</span><i> - hold on, loading data ;) </i></div> <div id='page_header__menu_button_box'></div> "+root_this_.generate_drop_down_menu_html()+" </div>");
+
+
+					//////// $( "body" ).append("<div id='"+"page_header__fixed"+"'><div id='page_header__main_text_area'><span id='page_header__issue_text_markup'>"+root_this_.strings_dictionary_multilinguial[ root_this_.current_language_code ].issue+" #"+root_this_.curr_issue_num+"</span><i> - hold on, loading data ;) </i></div> <div id='page_header__menu_button_box'></div> </div>");
+
+
+
+
+					///// the outer area for the meeting listing
+					////   /////////   root_this_.set_up_menu();		
+
+					root_this_.bind_interactive_options_to_menu();
+								
+
+
+					///// the outer area for the meeting listing
+					$( "body" ).append("<div id='"+"page_div_outer_outer"+"'>outer area</div>");
+
+					/////   the meetings listing HEADER in the page outer div
+					$( "#page_div_outer_outer" ).append("<div id='"+"meeting_listing_header"+"'></div>");
+
+					// add the 'start' text and arrow to the meeting listing header
+					//// $( "#meeting_listing_header" ).append( "<div id='"+"meeting_listing_header__start_txt_n_arrow__outer_div"+"'>START<div id='meeting_listing_header__arrow_inner_div'></div></div>" );
+					$( "#meeting_listing_header" ).append( "<div id='"+"meeting_listing_header__start_txt_n_WITHOUT_arrow__outer_div"+"'><span>"+root_this_.strings_dictionary_multilinguial[ root_this_.current_language_code ].meetings+"</span></div>" );
+
+
+
+					// the meetings listing listing in the page outer div
+					$( "#page_div_outer_outer" ).append("<div id='"+"meetings_listing_outer_area"+"'></div>");
+
+
+
+					/// generate the area with the icon explanations
+					this.generate_icon_explanation_area( root_this_ );
+					// and bind some interactive options to it
+					this.bind_interactive_options_to_icon_explanation_page( root_this_ );
+
+				}
+
+
+
+
+
+				/* --- menu item thingies  --- */
+
+
+				this.generate_drop_down_menu_html = function(){
+
+
+					//////// generate the menu text
+
+					//// start with the beginning
+					this.menu_html_as_txt = "<div id='"+"menu__drop_down_menu__outer_outer_area"+"'>";
+
+					// start the actual menu
+					this.menu_html_as_txt += "<div id='"+"menu__actual_menu_area"+"'>";
+
+					// add the menu item for the About page
+					this.menu_html_as_txt += "<div id='"+"menu_item__menu_title"+"' class="+"general_menu_item"+">Issue explorer</div>";
+
+					// add the menu item for the About page
+					this.menu_html_as_txt += "<a href='http://fi.okfn.org/paatokset-nakyviin/'><div id='"+"menu_item__about"+"' class="+"general_menu_item"+">About</div></a>";
+
+					// add the menu item for the explanations
+					this.menu_html_as_txt += "<div id='"+"menu_item__icons_explanations"+"' class="+"general_menu_item"+">Icon explanations</div>";
+
+					//// finish the menu html
+					this.menu_html_as_txt += "</div>";
+										
+					// add the invisible area behind the menu that, when clicked, closes the menu area
+					this.menu_html_as_txt += "<div id='menu__click_to_close_menu_area__behind_slide_out_menu_area'></div>";	
+
+					////// finish the outer menu enclosure area
+					this.menu_html_as_txt += "</div>";
+
+					//
+					return this.menu_html_as_txt ;
+				}
+
+
+
+				/* and add some interactivity to the drop down menu */
+
+				this.bind_interactive_options_to_menu = function(){
+
+					$("#"+"page_header__menu_button_box" ).click( function(){
+
+						console.log('click!!!');
+
+						$( "#"+"menu__drop_down_menu__outer_outer_area" ).toggle();
+
+					});
+
+
+					$("#menu__click_to_close_menu_area__behind_slide_out_menu_area" ).click( function(){
+
+						console.log('click222222!!!');
+						
+						$( "#"+"menu__drop_down_menu__outer_outer_area" ).toggle();
+
+					});
+
+
+					//// and the icon explanation title
+
+					$("#"+"menu_item__icons_explanations").click( function(){
+
+						// toggle the icon explanations area 
+						$("#"+"icon_explanation_area__outer_outer").toggle();
+
+						// and also close this menu please
+						$( "#"+"menu__drop_down_menu__outer_outer_area" ).toggle();
+
+					});
+
+
+				}
+
+
+
+
+
+
+
+
+				/* --- generate the div/area with the icon explanations --- */
+
+
+				this.generate_icon_explanation_area = function( root_this_ ){
+
+					console.log(">>>> generate_icon_explanation_area() ");
+
+
+					///// start the html text
+					this.icon_explanation_html_as_txt = "";
+
+					/// add the outer area - i.e. the one that covers the whole screen
+					this.icon_explanation_html_as_txt += "<div id='"+"icon_explanation_area__outer_outer"+"'>";
+
+					/// add a close box 
+					this.icon_explanation_html_as_txt += "<div id='"+"icon_explanation_area__header_outer__header__close_button"+"'></div>";
+
+					/// add the enclosure of the header & icon explanation listing
+					//		( can be good if we need to center that below on a page somewhere)
+					this.icon_explanation_html_as_txt += "<div id='"+"icon_explanation_area__enclosure_of_header_and_icon_explanation_listing"+"'>";
+
+					/// add the header area
+					this.icon_explanation_html_as_txt += "<div id='"+"icon_explanation_area__header_outer"+"'><div id='"+"icon_explanation_area__header_outer__header_txt_area"+"'>Icon explanation area</div></div>";
+
+
+
+					/// add the icon explanation area
+					this.icon_explanation_html_as_txt += "<div id='"+"icon_explanation_area__actual_icon_explanation_area_outer"+"'>";
+
+					// LOOOOOP!
+					///// generate all the entries that go into the icon explanation area!
+					for( this.curr_icon_explanation_entry_i = 0; this.curr_icon_explanation_entry_i < root_this_.resolution_types__as_linear_list.length; this.curr_icon_explanation_entry_i++ ){
+
+						//// add the entry text for each explanation
+						//		- don't forget the multilinguial aspect
+
+						//// start : open the icon explanation entry item
+						this.icon_explanation_html_as_txt += "<div class='"+"individual_icon_explanation_entry__outer"+"'>";
+
+			
+
+						//// TO-DO: add the div/part with the relevant icon
+						this.icon_explanation_html_as_txt += "<i class='resolution_icon fa fa-"+this.RESOLUTIONS_ICONS[ root_this_.resolution_types__as_linear_list[ this.curr_icon_explanation_entry_i ] ]+" fa-3x'></i>" ;
+
+						//// TO-DO: add the part with the explanatory text
+						//				… in a multilinguial fashion, please
+
+						//// TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD
+						//// TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD
+						//     			- PLEASE CHANGE THIS LATER!
+						this.icon_explanation_html_as_txt += root_this_.resolution_explanation_texts_as_multilinguial_dictionary[ root_this_.current_language_code ][ root_this_.resolution_types__as_linear_list[ this.curr_icon_explanation_entry_i ] ];
+						//// TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD
+						//// TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD	
+
+
+
+						//// finish : close the icon explanation entry item
+						this.icon_explanation_html_as_txt += "</div>";
+
+					}
+
+
+					/// close the icon explanation area listing area
+					this.icon_explanation_html_as_txt += "</div>";
+
+
+
+					/// close the header + icon explanation listing enclosure
+					this.icon_explanation_html_as_txt += "</div>";
+
+					/// close the outer outer area
+					this.icon_explanation_html_as_txt += "</div>";
+
+
+
+					////// insert the generated html into the html body :)
+					$( "body" ).append( this.icon_explanation_html_as_txt );
+				};
+
+
+
+				//// and the interactive functions of the above
+
+
+				this.bind_interactive_options_to_icon_explanation_page = function( root_this_ ){
+
+					console.log(">>>>>>>>>  bind_interactive_options_to_icon_explanation_page()");
+
+
+					// what about that close button?!
+					//// toggles the whole area
+					$("#"+"icon_explanation_area__header_outer__header__close_button").click( function(){
+
+						$("#"+"icon_explanation_area__outer_outer").toggle();
+
+					});
+				}
+
+
+
+
+				/* ---  update page header --- */
+
+
+
+				//////////   
+				//////////		update the page header test
+
+				this.update_page_header_text = function( root_this_, agenda_items_data ){
+
+					console.log(">>>> update_page_header_text of curr_agenda_item_data :");
+					console.log( agenda_items_data );
+
+					$("#page_header__main_text_area").html( "<span id='page_header__issue_text_markup'>"+root_this_.strings_dictionary_multilinguial[ root_this_.current_language_code ].issue+" #"+agenda_items_data.objects[0].issue.id+"</span> : "+agenda_items_data.objects[0].issue.subject );
+
+				}
+
+
+
+
+				/* ---   meeting listings area  --- */
+
+
+				//////////   
+				//////////		add individual meeting listing 
+
+				this.add_individual_meeting_listing = function( root_this, curr_agenda_item_data ){
+
+					console.log(">>>> add_individual_meeting_listing ");
+
+					// find the relevant policymaker icon html
+					this.curr_relevant_policymaker_icon_html_entry = "<i class='"+this.find_relevant_icon_class_name_given_meeting_object( curr_agenda_item_data.meeting )+"'></i>";
+
+					/////  console.log( "curr resolution icon class === |"+this.find_relevant_icon_class_name_given_meeting_object( curr_agenda_item_data.meeting )+"|" );
+
+					/////  console.log( "curr resolution icon html === |"+this.curr_relevant_policymaker_icon_html_entry+"|" );
+
+
+					///  find the relevant icon html
+					this.relevant_resolution_icon = "<i class='resolution_icon fa fa-"+this.RESOLUTIONS_ICONS[ curr_agenda_item_data.resolution ]+" fa-3x'></i>" ;
+
+
+					//////  generate the inner div text
+					////  this.inner_txt_div = "<div class='individual_meetings_listing__inner_text_area'>"+curr_agenda_item_data.meeting.date+" : <span class='bolder_text_weight'>"+curr_agenda_item_data.meeting.policymaker_name+"</span><br/>Category : <span class='bolder_text_weight'>"+curr_agenda_item_data.issue.category_name+"</span> <br/>Resolution : <span class='bolder_text_weight'>"+this.RESOLUTIONS_EN[ curr_agenda_item_data.resolution ]+"</span> | "+this.curr_relevant_policymaker_icon_html_entry+" | "+this.relevant_resolution_icon+" |</div>";
+
+					this.inner_inner_meeting_div_text_area = "<div class='inner_inner_meeting_div_text_area'>"+curr_agenda_item_data.meeting.date+"<br/><span class='bolder_text_weight'>"+curr_agenda_item_data.meeting.policymaker_name+"</div>";
+
+					this.inner_txt_div = "<div class='individual_meetings_listing__inner_text_area'>"+this.relevant_resolution_icon+""+this.inner_inner_meeting_div_text_area+"</div>";
+
+					///  this.inner_arrow_right_html_txt = "<div class='individual_meetings_listing__inner_arrowRight'></div>";
+					this.inner_arrow_right_html_txt = "";
+
+					this.inner_arrow_down_html_txt = "<div class='individual_meetings_listing__inner_arrowDown'></div>";
+
+
+					this.final_meeting_txt = "<a href='"+curr_agenda_item_data.permalink+"'><div class='individual_meetings_listing__outer_area'>"+this.inner_txt_div+""+this.inner_arrow_down_html_txt+"</div></a>";
+
+
+					//// and insert it into the meeting listing area
+					$("#meetings_listing_outer_area").append( this.final_meeting_txt );
+
+				}
+
+
+
+
+				/* --- add page footer --- */
+
+
+				this.add_meeting_listing_footer = function( root_this_ ){
+
+					$("#meetings_listing_outer_area").append("<div id='meeting_listing_footer'></div>" );
+
+					// add the 'start' text and arrow to the meeting listing header
+					$( "#meeting_listing_footer" ).append( "<div id='"+"meeting_listing_footer__start_txt_n_arrow__outer_div"+"'><div id='meeting_listing_footer__arrow_up_inner_div'></div>"+root_this_.strings_dictionary_multilinguial[ root_this_.current_language_code ].start+"</div>" );
+
+				}
+
+
+
+
+				/* ---	find the relevant icon name for a given policymaker  --- */
+
+
+				this.find_relevant_icon_class_name_given_meeting_object = function( relev_meeting_obj ){
+
+					// 
+					console.log( ">>>>> find_relevant_icon_class_name_given_meeting_object" );
+
+					/// how to…?
+
+					//// find the relevant policymaker, from the meeting data, /
+					//	in the policymaker data
+
+					var relevant_policymaker_abbreviation = "";
+
+					this.policymaker_data_.objects.map( function( individual_policymaker_data ){
+						if( individual_policymaker_data.resource_uri === relev_meeting_obj.policymaker ){
+
+							//////  console.log(" comparing the meeting data's policymaker name |"+relev_meeting_obj.policymaker+"| policymaker data with the policymaker data policymaker name |"+individual_policymaker_data.resource_uri+"| which has the abbreviation |"+individual_policymaker_data.abbreviation+"|" );
+
+							relevant_policymaker_abbreviation = individual_policymaker_data.abbreviation ;
+						}
+					});
+
+					// debug
+					//// console.log(" the abbreviation of policymaker |"+relev_meeting_obj.policymaker.policymaker_name+"| is |"+relevant_policymaker_abbreviation+"|" );
+					//// console.log("---- reprint of the policymaker abbreviation |"+relevant_policymaker_abbreviation+"|");
+
+
+					//// find the abbreviation for the relvant policymaker
+
+					//// find the relevant icon given the abbereviation
+					this.curr_relev_icon_class_name = "fa fa-"+this.POLICYMAKERS_icons[ relevant_policymaker_abbreviation ];
+
+					//
+					console.log(" the relevant policymaker icon is "+this.curr_relev_icon_class_name );
+
+					return this.curr_relev_icon_class_name;
+
+				}
+
+
+
+
+				/* ----------   text for differnet languages ---------  */
+
+
+				///// template for a dictionary of one language
+				//
+				this.text_dictionary_for_one_language = function(){
+
+					// which language
+					this.language = "en";
+
+					///////   strings
+
+					this.start = "Start";
+
+					this.meetings = "Meetings";
+
+					this.issue = "Issue";
+				}
+
+
+
+				//// a function to instantiate the different lagnuages
+				//
+
+				this.set_up_langauge_dictionaries = function(){
+
+					console.log(">>>> set_up_langauge_dictionaries() for  ");
+
+					////  instantiate the different dictionary objects in the main dictionary object 
+
+					// the english version
+					this.strings_dictionary_multilinguial[ this.dictionary_reference_for__language__english ] = new this.text_dictionary_for_one_language();
+
+					// the finnish version
+					this.strings_dictionary_multilinguial[ this.dictionary_reference_for__language__finnish ] = new this.text_dictionary_for_one_language();
+
+					// the swedish version
+					this.strings_dictionary_multilinguial[ this.dictionary_reference_for__language__swedish ] = new this.text_dictionary_for_one_language();
+
+
+					/////  update the dictionaries for the different languages
+
+					// finnish
+					this.strings_dictionary_multilinguial[ this.dictionary_reference_for__language__finnish ].start = "Vireilletulo";
+					this.strings_dictionary_multilinguial[ this.dictionary_reference_for__language__finnish ].meetings = "Käsittelyajankohdat";
+					this.strings_dictionary_multilinguial[ this.dictionary_reference_for__language__finnish ].issue = "Asia";
+
+					// swedish
+					this.strings_dictionary_multilinguial[ this.dictionary_reference_for__language__swedish ].start = "Start";
+					this.strings_dictionary_multilinguial[ this.dictionary_reference_for__language__swedish ].meetings = "Möten";
+					this.strings_dictionary_multilinguial[ this.dictionary_reference_for__language__swedish ].issue = "Sak";
+
+				}
+
+
+
+
+				/////  set the right language according to the url
+				//
+
+				this.set_relevant_lang_according_to_url = function( root_this_ ){
+
+					console.log(">>>> set_relevant_lang_according_to_url() ");
+
+					try{
+						this.current_language_code = $.urlParam( this.language_url_in_the_url  );
+						console.log(">>>> language from url succeeded - using the following language ("+this.current_language_code+")");
+
+						////// check whether it's one of the valid languages, else default to some language
+						this.found_valid_language_in_url = false;
+
+						// loop through the valid choices and check
+						for( key in this.strings_dictionary_multilinguial ){
+
+							console.log("- finding if the current url encoded language code ("+this.current_language_code +") corresonds to the current used valid language code ("+key+")" );
+
+							// check if the current used valid language corresponds to the language encoded in the url
+							if( key === this.current_language_code ){
+								this.found_valid_language_in_url = true;
+								break;
+							}
+
+						}
+
+						if( this.found_valid_language_in_url === false){
+							this.current_language_code = this.current_language_code__default_language ;
+							console.log("arghh... the language in the url isn't amongst the accepted ones… ("+this.current_language_code+") - using the default language ("+this.current_language_code__default_language+")");
+						}
+
+
+					}
+					catch( e){
+						// if no language is found in the url, then default to the default language
+						console.log(">>>> language from url fetch failed - using the standard language ("+this.current_language_code+")");
+					}
+
+				}
+
+
+
+
+
+				//////////////////
+				//////////////////    data loading
+				////////
+
+
+				this.initialise_page__load_data__and__initialise_setup = function( root_this_ ){
+
+					console.log(">>>>  initialise_page__load_data__and__initialise_setup() ");
+
+
+					// make the page
+					root_this_.set_up_basic_page( root_this_ );	
+
+
+					/////   try finding the issue num from the url and generate a data-fetching url based on the issue num
+					// 
+					root_this_.issue_num = 949;
+					var url;
+
+
+					try{
+						root_this_.issue_num = $.urlParam("issuenum");
+						url = "http://dev.hel.fi/paatokset/v1/agenda_item/?limit=1000&issue="+root_this_.issue_num;
+						console.log(" root_this_.issue_num === "+root_this_.issue_num );
+					}
+					catch(e){
+						console.log(" url reading is bugging out ;(* - error :"+e );
+					}
+					
+
+					/////   get the issue data				
+					$.get( url, function( issue_data ){
+
+						// assign the data to a local variable
+						root_this_.issue_data_ = issue_data;				
+						
+						// get a listing of all the policymakers
+						//		( this helps with fetching relevant icons )
+						$.get( "http://dev.hel.fi/paatokset/v1/policymaker/?limit=10000", function( policymakers_data ){
+
+							// assign the data to a local variable
+							root_this_.policymaker_data_ = policymakers_data;
+
+							// debug
+							console.log("just got a list of policymakers - yay! -> ");
+							console.log( policymakers_data );
+
+
+							// update the header
+							root_this_.update_page_header_text( root_this_, root_this_.issue_data_ );
+
+							for( this.curr_i = root_this_.issue_data_.objects.length-1; this.curr_i >= 0; this.curr_i-- ){
+								root_this_.add_individual_meeting_listing( root_this_, root_this_.issue_data_.objects[ this.curr_i ] );
+							}
+
+							// and add the footer
+							root_this_.add_meeting_listing_footer( root_this_ );
+
+
+						})
+
+					});
+
+				}
+
+
+
+
+
+
+
+				///// the initial setup on initialising th eobject
+				//
+				/* ============   HELLOW - RUNME!    ========== */
+				/* ============   HELLOW - RUNME!    ========== */
+				/* ============   HELLOW - RUNME!    ========== */
+
+
+
+				console.log(" >>>> hello - setting up a mnobile interface object ");
+
+				///////////  	set up the language dictionaries
+				//
+				this.set_up_langauge_dictionaries();
+
+				///////////  	(try) find the language from the url    
+				//
+				this.set_relevant_lang_according_to_url( this );
+
+				/// load the data 
+				this.initialise_page__load_data__and__initialise_setup( this );
+
+			}
+
+			
+
+
+
+
+
+			/* =========  runme   ========= */
+			
+			$( document ).ready( function(){
+
+				////////  $("body").append("<div id='hellow' style='display:none ; font-size:144px'>hellow!  <br/> - please enter a issue name in the url </div>");
+				
+				///////  setTimeout( function(){ $("#hellow").slideDown( 2000 ); }, 1000 );
+
+				//// set up the mobile_interface_object please ;)
+				window.our_mobile_interface = new mobile_interface();
+
+			});
+
+
+
+
+
+			
+
+
+
+
+
+		</script>
+
+	</body>
+
+</html>
+
