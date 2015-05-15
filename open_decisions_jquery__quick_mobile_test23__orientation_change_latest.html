@@ -1,0 +1,2176 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+	<head>
+
+
+		<title>those open decisions... </title>
+
+		<!-- regular jquery -->
+		<script src="libraries/jquery/v1ptSomething/jquery-1.11.1.js" charset="utf-8"></script>
+		<!-- jquery mobile -->
+		<script src="libraries/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js" charset="utf-8"></script>
+
+		<!-- set the time coding -->
+		<script src="libraries/moment/moment.js" charset="utf-8"></script>
+		<!-- and load the local languages -->
+		<script src="libraries/moment/locale/sv.js" charset="utf-8"></script>
+		<script src="libraries/moment/locale/fi.js" charset="utf-8"></script>
+
+
+		<!-- ////  the icons  //// -->
+
+		<!-- local storeage -->
+		<link rel="stylesheet" href="libraries/font-awesome-4.2.0/css/font-awesome.min.css">
+		<!--  CDN link to the icons
+			<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		-->
+
+
+		<style type="text/css">
+
+
+			body{
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;				
+				font-family: "Open Sans", sans-serif;
+				background-color: rgb( 255, 255, 250);
+				color: rgb( 140, 81, 16);
+				font-size: 16px;
+			}	
+
+
+
+			/* -- hide the jquery mobile bits please -- */
+			.ui-page{
+				display: none;
+			}
+
+			h1{
+				display: none;
+			}
+
+
+			/* -----  landscape mode  ----- */
+			/* -----  landscape mode  ----- */
+			/* -----  landscape mode  ----- */
+
+
+			/* -- header things -- */
+
+			#page_header__fixed__portrait_mode{
+				position: fixed;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				min-height: 105px;
+				background-color: rgb( 250, 250, 235);
+				z-index: 5;
+			}
+
+			#page_header__main_text_area{
+				position: relative;
+				left: 0px;
+				top: 0px;
+				margin: 20px;
+				margin-right: 65px;				
+				font-size: 16px;
+				font-weight: 600;
+				color: rgb( 102, 36, 0);
+			}
+
+			#page_header__issue_text_markup{
+				color: rgb( 140, 81, 16 );
+				font-size: 16px;
+				font-weight: 600;
+				color: rgb( 102, 36, 0);
+			}
+
+			#page_header__menu_button_box{
+				position: absolute;
+				right:0px;
+				top: 0px;
+				width: 50px;
+				height: 100%;
+				background-color: rgb( 180, 128, 128);
+				z-index: 15;
+			}
+
+			#page_div_outer_outer{
+				position: absolute;
+				/* display: none; */
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				min-height: 100%;
+			}	
+
+
+
+			/* -----  landscape mode  ----- */
+			/* -----  landscape mode  ----- */
+			/* -----  landscape mode  ----- */
+
+
+			#page_outer_outer__landscape{
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;		
+				position: absolute;
+				left: 0px;
+				top: 0px;				
+				max-width: 1024px;
+				min-width: 700px;
+			}
+
+
+			/* -- header area -- */
+
+			#header__landscape{
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;	
+				position: relative;
+				left: 0%;
+				top: 0%;
+				width: 100%;
+				/* height: 20%; */
+				min-height: 105px;
+				background-color: rgb( 250, 250, 235 );
+				/* border: 1px dashed red; */
+			}
+
+			#header__text_area__landscape{
+				padding: 20px;
+				padding-right: 65px;
+			}
+
+			#issue_num{
+
+			}
+
+			#issue_text{
+
+			}
+
+			#header__menu_area_outer__landscape{
+
+			}
+
+
+
+			/* -- bottom area -- */
+
+
+			#bottom_outer_area__landscape{
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;		
+				position: relative;
+				top: 0px;
+				left: 0px;
+				/* width: 1026px; */
+				width: 100%;
+				height: 478px;
+				/* border: 1px dashed orange; */
+			}
+
+
+			/* - left/first meeting area - */
+
+			#left_first_meeting_area_outer{
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;	
+				position: relative;
+				float: left;
+				left: 0%;
+				top: 0%;
+				width: 283px;
+				height: 478px;
+				background-color: white;
+				z-index: 5;
+				/* border: 1px dashed rgb( 240, 240, 200 ); */
+			}
+
+			#left_first_meeting__inner_image_area{
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;	
+				position: absolute;
+				left: 0%;
+				top: 0%;
+				width: 283px;
+				height: 207px;
+				/* border: 1px dashed rgb( 250, 150, 135 ); */
+			}
+
+			.text_area_outer{
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;	
+				position: absolute;
+				left: 0px;
+				top: 207px;
+				width: 283px;
+				height: 270px;
+				padding: 37px;
+				padding-top: 18px;
+				/* border: 1px dashed rgb( 240, 240, 200 ); */
+			}
+
+			.text_area__date_span{
+
+			}
+
+			.text_area__policymaker_span{
+
+			}
+
+
+
+			/* - middle meeting area - */
+
+			#middle_area__outer{
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;					
+				position: absolute;
+				float: left;
+				right: 283px;
+				top: 0%;
+				width: 460px;
+				height: 478px;
+				/* background-image: url( images/landscape_mode__horizontal_arrow_right__fixed_size.svg );
+				background-repeat: no-repeat;
+				background-position: 0px 179px; */
+				overflow: hidden;
+				/* border: 1px dashed blue; */
+				z-index; 0
+			}
+
+			/* arrow line */
+			#middle_area__arrow_right_line_only{
+				position: absolute;
+				right: 0px;
+				top: 50%;
+				width: 460px;
+				height: 54px;
+				background-image: url( images/landscape_mode__horizontal_arrow_right__fixed_size.svg );
+			}
+
+
+			/* arrow head */
+			#middle_area__arrow_right_arrowHead_only{
+
+			}
+
+
+			/* - right/last meeting area - */
+
+			#right_last_meeting_area_outer{
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;					
+				position: absolute;
+				/* float: left; */
+				right: 0px;
+				top: 0px;
+				width: 283px;
+				height: 478px;
+				/* border: 1px dashed rgb( 240, 240, 200 ); */
+			}
+
+			#right_last_meeting__inner_image_area{
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;	
+				position: absolute;
+				left: 0%;
+				top: 0%;
+				width: 283px;
+				height: 207px;
+				/* border: 1px dashed rgb( 250, 150, 135 ); */
+			}
+
+			/* same ones as for the left area????
+			.text_area_outer{
+
+			}
+
+			.text_area__date_span{
+
+			}
+
+			.text_area__policymaker_span{
+
+			}
+			*/
+
+
+
+
+			/* -- header : drop down menu -- */
+			/* -- header : drop down menu -- */
+			/* -- header : drop down menu -- */
+
+			/* the little horizontal marks in the menu button */
+			.page_header__menu_button_box__inner_horizontal_bars{
+				position: relative;
+				margin-top: 33%;
+				left: 20%;
+				width: 60%;
+				height: 4%;
+				background-color: white;
+			}
+
+/* - fix this better later
+			/* for the portrait mode particularly */
+/*
+			#page_header__fixed__portrait_mode .page_header__menu_button_box__inner_horizontal_bars:first-child{
+				margin-top: 55%;
+			}
+
+			#header__text_area__landscape .page_header__menu_button_box__inner_horizontal_bars:first-child{
+				margin-top: 42%;
+			}
+*/
+
+
+			#menu__drop_down_menu__outer_outer_area{
+				display: none;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+			}
+
+			#menu__actual_menu_area{
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;	
+				display: block;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				width: 400px;
+				height: auto;
+				padding: 30px;
+				padding-right: 70px;
+				padding-bottom: 60px;
+				/* padding-bottom: 30px; */
+				color: white;
+				background-color: rgba( 100, 0, 0, 0.75 );
+				z-index: 10;
+			}
+
+			#menu_item__menu_title{
+				font-weight: 700;
+				border-bottom: 3px solid white;				
+			}
+
+			.general_menu_item{
+				font-size: 22px;				
+				margin: 20px;
+				margin-bottom: 40px;
+			}
+
+			#menu_input_field__outer__input_field{
+				position: relative;
+				left: 0px;
+				top: -30px;
+				float: left;
+				margin-left: 20px;
+				width: 100%;
+				height: 15px;
+				/* border: 1px solid yellow; */
+			}
+
+			#menu_input_field_actual__input_field{
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;	
+				position: relative;
+				float: left;
+				left: 0px;
+				top: 0px;
+				width: 232px;
+				height: 44px;
+				padding-left: 10px;
+				font-size: 22px;
+				color: rgb( 140, 100, 100 );
+				background-color: white;
+				border: 0;
+				border: 1px solid white;
+				outline: none;
+			}
+
+			#menu_input_field__search_button{
+				position: relative;
+				float: left;
+				left: 0px;
+				top: 0px;
+				width: 54px;
+				height: 40px;
+				background-color: rgb( 140, 0, 0);
+				border: 2px solid white;
+				background-image: url( images/search_icon.svg );
+				background-position: 7px 1px;
+				background-repeat: no-repeat;
+			}
+
+
+
+			#menu__click_to_close_menu_area__behind_slide_out_menu_area{
+				position: fixed;
+				top: 0px;
+				right: 0px;
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(255, 128, 128, 0.0 );
+				z-index: 5;
+			}
+
+
+
+			/* change link decorations please, of the menu items, please */
+
+			#menu__drop_down_menu__outer_outer_area a:link{
+			    text-decoration: none;
+			    color: white;
+			}
+
+			#menu__drop_down_menu__outer_outer_area a:visited {
+			    text-decoration: none;
+			    color: white;
+			}
+
+			#menu__drop_down_menu__outer_outer_area a:hover {
+			    text-decoration: none;
+			    color: white;
+			}
+
+			#menu__drop_down_menu__outer_outer_area a:active {
+			    text-decoration: none;
+			    color: white;
+			}
+
+
+
+
+
+			/* -- meetings listing things -- */
+
+
+			#meeting_listing_header{
+				position: relative;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				height: 55px;
+			}
+
+			#meeting_listing_header__start_txt_n_arrow__outer_div{
+				margin-top: 162px;
+				width: 70px;
+				height: 61px;
+				margin-left: auto;
+				margin-right: auto;
+				font-size: 16px;
+				color: rgb( 140, 81, 16 );
+				text-align: center;
+			}
+
+
+			#meeting_listing_header__start_txt_n_WITHOUT_arrow__outer_div{
+				margin-top: 162px;
+				/* width: 80px; */
+				/* height: 61px; */
+				margin-left: auto;
+				margin-right: auto;
+				font-size: 16px;
+				color: rgb( 140, 81, 16 );
+				text-align: center;
+			}
+
+			#meeting_listing_header__start_txt_n_WITHOUT_arrow__outer_div span{
+				border-bottom: 1px solid rgb( 140, 81, 16 );
+			}
+
+
+			#meeting_listing_header__arrow_inner_div{
+				width: 41px;
+				height: 37px;
+				margin-left: auto;
+				margin-right: auto;
+				background-image: url( images/listings_header_arrow_down.svg );
+				background-repeat: no-repeat;
+			}
+
+
+			#meetings_listing_outer_area{
+				position: relative;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				min-height: 200px;
+			}
+
+			.individual_meetings_listing__outer_area{
+				position: relative;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				min-height: 88px;
+				border-bottom: 1px solid rgb( 217, 217, 174);				
+			}
+
+			.individual_meetings_listing__outer_area:first-child{
+				border-top: 1px solid rgb( 217, 217, 174);
+			}
+
+
+			.individual_meetings_listing__inner_text_area{
+				position: relative;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 27px;
+				margin-bottom: 1px;
+				min-width: 100px;
+				max-width: 562px;
+				min-height: 100px;
+				font-weight: 400;
+			}
+
+			.inner_inner_meeting_div_text_area{
+				position: relative;
+				top: 3px;
+				float: left;
+			}
+
+
+			#meeting_listing_footer{
+				position: relative;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				height: 168px;
+			}
+
+			#meeting_listing_footer__start_txt_n_arrow__outer_div{
+				position: relative;
+				margin-top: 40px;
+				width: 70px;
+				height: 61px;
+				margin-left: auto;
+				margin-right: auto;
+				font-size: 16px;
+				color: rgb( 140, 81, 16 );
+				text-align: center;
+			}
+
+			#meeting_listing_footer__arrow_up_inner_div{
+				width: 41px;
+				height: 37px;
+				margin-left: auto;
+				margin-right: auto;
+				background-image: url( images/listings_header_arrow_up.svg );
+				background-repeat: no-repeat;
+			}
+
+
+
+			.bolder_text_weight{
+				font-weight: 600;
+			}
+
+			.individual_meetings_listing__inner_arrowRight{
+				position: absolute;
+				top: 40px;
+				right: 24px;
+				width: 26px;
+				height: 90px;
+				background-image: url( images/individual_listing__arrow_right.svg );
+			}
+
+			.individual_meetings_listing__inner_arrowDown{
+				position: absolute;
+				bottom: 0px;
+				margin-left: auto;
+				margin-right: auto;
+				width: 14px;
+				height: 21px;
+				background-image: url( images/individual_listing__arrow_down.svg );
+			}
+
+
+
+			.resolution_icon{
+				position: relative;
+				float: left;
+				margin-right: 20px;
+			}
+
+			/* icon positioning for the landscape mode */
+			#page_outer_outer__landscape i{
+				position: relative;
+				top: 55%;
+				left: 27%;
+				/* width: 100%;*/
+				/*text-align: center;*/
+			}
+
+
+			/* change link decorations please, on the meetings listing area, please */
+			#meetings_listing_outer_area a:link {
+			    text-decoration: none;
+			    color: rgb( 140, 81, 16 );
+			}
+
+			#meetings_listing_outer_area a:visited {
+			    text-decoration: none;
+			    color: rgb( 140, 81, 16 );
+			}
+
+			#meetings_listing_outer_area a:hover {
+			    text-decoration: none;
+			    color: rgb( 140, 81, 16 );
+			}
+
+			#meetings_listing_outer_area a:active {
+			    text-decoration: none;
+			    color: rgb( 140, 81, 16 );
+			}
+
+
+
+
+			/* --- icon explanation area --- */
+
+			#icon_explanation_area__outer_outer{
+				display: none;
+				position: fixed;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				height: 100%;
+				background-color: rgba( 250, 250, 230, 0.95);
+				z-index: 20;
+			}
+
+			#icon_explanation_area__enclosure_of_header_and_icon_explanation_listing{
+
+			}
+
+			#icon_explanation_area__header_outer{
+
+			}
+
+			#icon_explanation_area__header_outer__header_txt_area{
+
+			}
+
+			#icon_explanation_area__header_outer__header__close_button{
+				position: fixed;
+				right: 0px;
+				top: 0px;
+				width: 50px;
+				height: 50px;
+				background-image: url( images/symbols_explanation_page__close_box.svg );
+				background-color: rgb( 250, 250, 230);
+				border: 1px solid rgb( 150, 150, 130);
+			}
+
+			#icon_explanation_area__actual_icon_explanation_area_outer{
+
+			}
+
+			.individual_icon_explanation_entry__outer{
+				min-height: 55px;
+				width: 300px;				
+				padding-left: 5%;				
+				padding-right: 5%;				
+				margin-left: auto;
+				margin-right: auto;
+				border-bottom: 1px solid rgb( 217, 217, 174);	
+			}
+
+			.individual_icon_explanation_entry__outer p{
+				line-height: 150%;
+			}
+
+
+
+
+
+
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<script type="text/javascript">
+
+			// hellow!
+			console.log("hellow world!");
+
+			/// just a  place to store data
+			var issue_data_ ; 
+
+
+
+
+
+			//// function to dissect urls
+			//
+			$.urlParam = function(name){
+			    var results = new RegExp('[\?&amp;]' + name + '=([^&amp;#]*)').exec(window.location.href);
+			    return results[1] || 0;
+			}
+
+
+
+			//////// 
+
+			this.mobile_interface = function(){
+
+
+				/* ----  parameters   --- */
+
+				// which orientation does the device have?
+				this.curr_device_orientation__mode_texts__landscape = "curr_device_orientation__mode_texts__landscape"; 
+				this.curr_device_orientation__mode_texts__portrait = "curr_device_orientation__mode_texts__portrait"; 
+				/// THE CURRENT ORIENTATION MODE
+				this.curr_device_orientation = this.curr_device_orientation__mode_texts__landscape ;
+
+
+				/* ---- issue num?! --- */
+
+				this.curr_issue_num = " -?-?-?-?-?-?";
+
+				/* ----  data --- */				
+
+				this.issue_data_ ;
+
+
+				/* ---- string/language dictionary --- */
+
+				this.strings_dictionary_multilinguial = {};
+
+				// just some variables pointing at relevant languages
+				this.dictionary_reference_for__language__finnish = "fi";
+				this.dictionary_reference_for__language__english = "en";
+				this.dictionary_reference_for__language__swedish = "sv";
+
+				// which language is currently used?
+				this.current_language_code = this.dictionary_reference_for__language__finnish;
+				// what's the default language
+				this.current_language_code__default_language = this.dictionary_reference_for__language__finnish;
+
+				// language parameter/key in the url 
+				this.language_url_in_the_url = "lang";
+
+
+				/* ----  various lookups  */
+
+				this.policymaker_data_ ; 
+
+
+				/// Meanings of reoslution codes
+				//		- in Finnish/English
+				//		- in Icons
+
+				/// the resolutions meanings in English
+				this.RESOLUTIONS_EN = {
+				    'PASSED': 'Passed as drafted',
+				    'PASSED_VOTED': 'Passed after a vote',
+				    'PASSED_REVISED': 'Passed revised by presenter',
+				    'PASSED_MODIFIED': 'Passed modified',
+				    'REJECTED': 'Rejected',
+				    'NOTED': 'Noted as informational',
+				    'RETURNED': 'Returned to preparation',
+				    'REMOVED': 'Removed from agenda',
+				    'TABLED': 'Tabled',
+				    'ELECTION': 'Election',
+				};
+
+				//  the reoslutions in Finnish
+				this.RESOLUTIONS_FI = {
+				    'PASSED': 'Ehdotuksen mukaan',
+				    'PASSED_VOTED': 'Ehdotuksen mukaan äänestyksin',
+				    'PASSED_REVISED': 'Esittelijän muutetun ehdotuksen mukaan',
+				    'PASSED_MODIFIED': 'Esittelijän ehdotuksesta poiketen',
+				    'REJECTED': 'Hylättiin',
+				    'NOTED': 'Merkittiin tiedoksi',
+				    'RETURNED': 'Palautettiin',
+				    'REMOVED': 'Poistettiin',
+				    'TABLED': 'Jätettiin pöydälle',
+				    'ELECTION': 'Vaali'
+				};
+
+				//  the reoslutions in Swedish
+				this.RESOLUTIONS_SE = {
+				    'PASSED': 'Godtagen utan ändring',
+				    'PASSED_VOTED': 'Godtagen efter röstning',
+				    'PASSED_REVISED': 'Godtagen med ändringar från "[presenter]"',
+				    'PASSED_MODIFIED': 'Godtagen med ändringar',
+				    'REJECTED': 'Nedröstad',
+				    'NOTED': 'Noterad som upplysningsfull',
+				    'RETURNED': 'Skickad åter till preparation',
+				    'REMOVED': 'Borttagen från agendan',
+				    'TABLED': 'Bordlagd',
+				    'ELECTION': 'Val'
+				};
+
+
+				//// the resolution explanations as a associative array
+				//		- simply an associative array of the icon exlanation texts above
+				this.resolution_explanation_texts_as_multilinguial_dictionary = {};
+				this.resolution_explanation_texts_as_multilinguial_dictionary[ this.dictionary_reference_for__language__finnish ] = this.RESOLUTIONS_FI ;
+				this.resolution_explanation_texts_as_multilinguial_dictionary[ this.dictionary_reference_for__language__english ] = this.RESOLUTIONS_EN ;
+				this.resolution_explanation_texts_as_multilinguial_dictionary[ this.dictionary_reference_for__language__swedish ] = this.RESOLUTIONS_SE ;
+
+
+				/// Associative array for the icons
+				this.RESOLUTIONS_ICONS = {
+				    'PASSED': 'check',
+				    'PASSED_VOTED': 'hand-o-up',
+				    'PASSED_REVISED': 'check-circle-o',
+				    'PASSED_MODIFIED': 'check-circle',
+				    'REJECTED': 'trash-o',
+				    'NOTED': 'exclamation-circle',
+				    'RETURNED': 'repeat',
+				    'REMOVED': 'times',
+				    'TABLED': 'inbox',
+				    'ELECTION': 'group',
+				    'null' : "question",
+				    'undefined' : "question",
+			     };
+
+
+			     /// policymaker icons
+			     this.POLICYMAKERS_icons = 
+				{
+				    'Aslk': 'home',
+				    'Asuntk': 'home',
+				    'Zoojk': 'bug',
+				    'Oivajk': 'group',
+				    'Koja': 'briefcase',
+				    'Sote': 'medkit',
+				    'Khs': 'legal',
+				    'Museojk': 'asterisk',
+				    'Kvsto': 'microphone',
+				    'Kslk': 'eraser',
+				    'Kvlk': 'ticket',
+				    'Klk': 'building-o',
+				    'Kklk': 'picture-o',
+				    'HKLjk': 'road',
+				    'LILK': 'trophy',
+				    'Nlk': 'smile-o',
+				    'SKJ': 'pencil',
+				    'OLK': 'pencil',
+				    'Palmiajk': 'leaf',
+				    'PELK': 'fire-extinguisher',
+				    'Sotelk': 'medkit',
+				    'Soslk': 'heart',
+				    'Stojk': 'book',
+				    'Taimujk': 'asterisk',
+				    'Talpajk': 'euro',
+				    'Talk': 'eye',
+				    'Tija': 'laptop',
+				    'Tplk': 'cog',
+				    'Tervlk': 'user-md',
+				    'Vakalk': 'puzzle-piece',
+				    'Ytlk': 'wrench',
+				    'Ylk': 'leaf'
+				    }
+
+
+
+
+			    ///// a manually made list of the resolution types
+			    //		- it's made manually such that the order is not random
+			    this.resolution_types__as_linear_list = [ "PASSED", "PASSED_VOTED", "PASSED_REVISED", "PASSED_MODIFIED", "REJECTED", "NOTED", "RETURNED", "REMOVED", "TABLED", "ELECTION" ];
+
+
+
+			    ///////  diarionummeri box thingies
+
+			    // the default text string
+			    this.diary_number_input_box___default_text_string = "diaarinum here please";
+
+			    // flag as to whether the search field has been clicked
+			    this.diary_num_has_been_clicked = false;
+
+			    // and the entered text string
+			    this.diary_num_field__current_search_string = "";
+
+
+
+				/* ============   METHODS    ========== */
+				/* ============   METHODS    ========== */
+				/* ============   METHODS    ========== */
+
+
+
+
+				/* - fetch current orientation mode orientation modes - */
+
+				this.fetch_current_device_orientation_mode = function(){
+
+					console.log(">>>> fetch_current_device_orientation_mode() ");
+
+
+					this.are_we_in_testmode__if_so_what_orientation = false;
+
+
+					/// fetch the parameters from the url
+					try{
+						this.are_we_in_testmode__if_so_what_orientation = $.urlParam("testmode");
+						console.log(" this.are_we_in_testmode__if_so_what_orientation === "+this.are_we_in_testmode__if_so_what_orientation );
+					}
+					catch(e){
+						console.log(" url reading is bugging out ;(* - error :"+e );
+					}
+
+
+					if( this.are_we_in_testmode__if_so_what_orientation !== false ){
+
+						////// check if there is in fact a parameter passed
+
+						if( this.are_we_in_testmode__if_so_what_orientation === "h" ){
+
+							this.curr_device_orientation = this.curr_device_orientation__mode_texts__landscape ;
+						} 
+						else if( this.are_we_in_testmode__if_so_what_orientation === "v" ){
+
+							this.curr_device_orientation = this.curr_device_orientation__mode_texts__portrait ;
+						}
+
+						console.log("\t - found orientation mode in url, which is |"+this.curr_device_orientation+"|")
+
+
+					}else{
+						// If there's no test-mode url thingie…
+						// do it a bit roughly 
+						//		compare which page width is wider/narrower
+						//
+						if(window.innerHeight < window.innerWidth){
+
+						    console.log("\t -currently in landscape mode");
+
+						    this.curr_device_orientation = this.curr_device_orientation__mode_texts__landscape ;
+
+						} else{
+
+						    console.log("\t -currently in portrait mode");
+
+						    this.curr_device_orientation = this.curr_device_orientation__mode_texts__portrait ;
+						}
+					}
+
+
+
+					console.log("//// the orientation mode is now |"+this.curr_device_orientation+"|");
+
+
+
+					//// visual debug 
+					//////  $( "body").append("<div style='width:100%'>"+this.curr_device_orientation+"</div>");
+				}
+
+
+
+				/* - basic page setup sensitive to orientation modes - */
+
+
+				this.set_up_basic_page__depending_on_orientation_mode = function( root_this_ ){
+
+					console.log(">>>>> set_up_basic_page__depending_on_orientatino_mode - for orientatino mode |"+root_this_.curr_device_orientation+"|");
+
+
+					if( root_this_.curr_device_orientation === root_this_.curr_device_orientation__mode_texts__landscape ){
+
+						console.log("\t - setting up the page in landscape mode ");
+
+						//
+						root_this_.set_up_basic_page__landscape_mode( root_this_ );
+
+					}else if( root_this_.curr_device_orientation === root_this_.curr_device_orientation__mode_texts__portrait ){
+
+						console.log("\t - setting up the page in portrait mode ");
+
+						/// do the basic setup
+						root_this_.set_up_basic_page__portrait_mode( root_this_ );
+
+					}
+
+				}
+
+
+
+
+
+
+
+				/* ---- portrait mode page setups ---- */
+				/* ---- portrait mode page setups ---- */
+				/* ---- portrait mode page setups ---- */
+
+
+
+				/* - basic page setup for portrait mode - */
+
+
+				this.set_up_basic_page__portrait_mode = function( root_this_ ){
+
+					// 
+					console.log(">>>> set_up_basic_page__portrait_mode");
+
+					// the page header
+					$( "body" ).append("<div id='"+"page_header__fixed__portrait_mode"+"'><div id='page_header__main_text_area'><span id='page_header__issue_text_markup'>"+root_this_.strings_dictionary_multilinguial[ root_this_.current_language_code ].issue+" #"+root_this_.curr_issue_num+"</span><i> - hold on, loading data ;) </i></div> <div id='page_header__menu_button_box'><div class='page_header__menu_button_box__inner_horizontal_bars'></div><div class='page_header__menu_button_box__inner_horizontal_bars'></div><div class='page_header__menu_button_box__inner_horizontal_bars'></div></div>"+root_this_.generate_drop_down_menu_html_02() );
+
+
+					//////// $( "body" ).append("<div id='"+"page_header__fixed__portrait_mode"+"'><div id='page_header__main_text_area'><span id='page_header__issue_text_markup'>"+root_this_.strings_dictionary_multilinguial[ root_this_.current_language_code ].issue+" #"+root_this_.curr_issue_num+"</span><i> - hold on, loading data ;) </i></div> <div id='page_header__menu_button_box'></div> </div>");
+
+
+
+
+					///// the outer area for the meeting listing
+					////   /////////   root_this_.set_up_menu();		
+
+					root_this_.bind_interactive_options_to_menu( root_this_ );
+								
+
+
+					///// the outer area for the meeting listing
+					$( "body" ).append("<div id='"+"page_div_outer_outer"+"'>outer area</div>");
+
+					/////   the meetings listing HEADER in the page outer div
+					$( "#page_div_outer_outer" ).append("<div id='"+"meeting_listing_header"+"'></div>");
+
+					// add the 'start' text and arrow to the meeting listing header
+					//// $( "#meeting_listing_header" ).append( "<div id='"+"meeting_listing_header__start_txt_n_arrow__outer_div"+"'>START<div id='meeting_listing_header__arrow_inner_div'></div></div>" );
+					$( "#meeting_listing_header" ).append( "<div id='"+"meeting_listing_header__start_txt_n_WITHOUT_arrow__outer_div"+"'><span>"+root_this_.strings_dictionary_multilinguial[ root_this_.current_language_code ].meetings+"</span></div>" );
+
+
+
+					// the meetings listing listing in the page outer div
+					$( "#page_div_outer_outer" ).append("<div id='"+"meetings_listing_outer_area"+"'></div>");
+
+
+
+					/// generate the area with the icon explanations
+					this.generate_icon_explanation_area( root_this_ );
+					// and bind some interactive options to it
+					this.bind_interactive_options_to_icon_explanation_page( root_this_ );
+
+				}
+
+
+
+
+
+
+
+				/* - basic page setup for portrait mode - */
+
+
+				this.update_page_content_depending_on_orientation_mode = function( root_this_ ){
+
+					// 
+					console.log(">>>> update_page_content_depending_on_orientation_mode - for orientatino "+this.curr_device_orientation );
+
+
+					//// do different things for the different modes
+					if( root_this_.curr_device_orientation === root_this_.curr_device_orientation__mode_texts__landscape ){
+
+						console.log("\t - UPDATAING up the page in landscape mode ");
+
+						// update :)
+						root_this_.update_page_content___for_landscape_mode( root_this_ );
+
+
+					}else if( root_this_.curr_device_orientation === root_this_.curr_device_orientation__mode_texts__portrait ){
+
+						console.log("\t - UPDATING up the page in portrait mode ");
+
+						/// do the basic setup
+						root_this_.update_page_content___for_portrait_mode( root_this_ );
+					}
+
+				}
+
+
+
+
+
+				/* - set up + update page for portrait mode --- useful for orientation changes */
+
+				this.redraw_page_content__on_orientation_change__depending_on_orientation_mode = function( root_this_ ){
+
+					console.log(">>>> redraw_page_content__on_orientation_change__for_portrait_mode() ");
+
+					// wipe the existing
+					$("body").empty();
+
+					/// check whether the data is loaded or not
+					if( root_this_.issue_data_.objects.length === 0 ){
+
+						// no data…?
+						// - load the data 
+
+					} // if the data is loaded already
+					else{
+
+						// set up the page
+						root_this_.set_up_basic_page__depending_on_orientation_mode( root_this_ );
+
+						// update the content 
+						root_this_.update_page_content_depending_on_orientation_mode( root_this_ );						
+					}
+
+
+				}
+
+
+
+
+				/* - basic page update for portrait mode - */
+
+				this.update_page_content___for_portrait_mode = function( root_this_ ){
+
+					console.log(">>> update_page_content___for_portrait_mode() ");
+
+					// update the header
+					root_this_.update_page_header_text__portrait_mode( root_this_, root_this_.issue_data_ );
+
+					// empty the meetings listing area
+					$("#meetings_listing_outer_area").empty();
+
+					for( this.curr_i = root_this_.issue_data_.objects.length-1; this.curr_i >= 0; this.curr_i-- ){
+						root_this_.add_individual_meeting_listing__portrait_mode( root_this_, root_this_.issue_data_.objects[ this.curr_i ] );
+					}
+
+					// and add the footer
+					root_this_.add_meeting_listing_footer__portrait_mode( root_this_ );
+
+				}
+
+
+
+
+
+
+				/* --- menu item thingies  --- */
+
+
+				this.generate_drop_down_menu_html = function(){
+
+
+					//////// generate the menu text
+
+					//// start with the beginning
+					this.menu_html_as_txt = "<div id='"+"menu__drop_down_menu__outer_outer_area"+"'>";
+
+					// start the actual menu
+					this.menu_html_as_txt += "<div id='"+"menu__actual_menu_area"+"'>";
+
+					// add the menu item for the About page
+					this.menu_html_as_txt += "<div id='"+"menu_item__menu_title"+"' class="+"general_menu_item"+">Issue explorer</div>";
+
+					// add the menu item for the About page
+					this.menu_html_as_txt += "<a href='http://fi.okfn.org/paatokset-nakyviin/'><div id='"+"menu_item__about"+"' class="+"general_menu_item"+">About</div></a>";
+
+					// add the menu item for the explanations
+					this.menu_html_as_txt += "<div id='"+"menu_item__icons_explanations"+"' class="+"general_menu_item"+">Icon explanations</div>";
+
+					//// finish the menu html
+					this.menu_html_as_txt += "</div>";
+										
+					// add the invisible area behind the menu that, when clicked, closes the menu area
+					this.menu_html_as_txt += "<div id='menu__click_to_close_menu_area__behind_slide_out_menu_area'></div>";	
+
+					////// finish the outer menu enclosure area
+					this.menu_html_as_txt += "</div>";
+
+					//
+					return this.menu_html_as_txt ;
+				}
+
+
+				////  modified version of the menu generation
+				//		to accomodate for v.2.0 items
+				//		like an input field
+				//
+				this.generate_drop_down_menu_html_02 = function(){
+
+
+					//////// generate the menu text
+
+					//// start with the beginning
+					this.menu_html_as_txt = "<div id='"+"menu__drop_down_menu__outer_outer_area"+"'>";
+
+					// start the actual menu
+					this.menu_html_as_txt += "<div id='"+"menu__actual_menu_area"+"'>";
+
+					// add the menu item for the menu title
+					this.menu_html_as_txt += "<div id='"+"menu_item__menu_title"+"' class="+"general_menu_item"+">Open Ahjo issue explorer</div>";
+
+					// add the menu item for the About page
+					this.menu_html_as_txt += "<a href='http://fi.okfn.org/paatokset-nakyviin/'><div id='"+"menu_item__about"+"' class="+"general_menu_item"+">About</div></a>";
+
+
+					// add the menu item for the explanations
+					this.menu_html_as_txt += "<div id='"+"menu_item__icons_explanations"+"' class="+"general_menu_item"+">Icon explanations</div>";
+
+					// add/OPEN the menu item for the explanations
+					this.menu_html_as_txt += "<div id='"+"search_box_description_text"+"' class="+"general_menu_item"+">Enter desired issue diaarinumero</div>";
+
+					// add the outer input field, that's a outer to the input + search button box
+					this.menu_html_as_txt += "<div id='"+"menu_input_field__outer__input_field"+"'>";
+
+					// add the actual input field
+					this.menu_html_as_txt += "<input id='"+"menu_input_field_actual__input_field"+"'  type='text' value='"+this.diary_number_input_box___default_text_string+"'>";
+
+					// add the search field buttom
+					this.menu_html_as_txt += "<div id='"+"menu_input_field__search_button"+"'></div>";
+
+					// cloe the outer input field
+					this.menu_html_as_txt += "</div>";
+
+					//// close the menu html
+					this.menu_html_as_txt += "</div>";
+										
+					// add the invisible area behind the menu that, when clicked, closes the menu area
+					this.menu_html_as_txt += "<div id='menu__click_to_close_menu_area__behind_slide_out_menu_area'></div>";	
+
+					////// finish the outer menu enclosure area
+					this.menu_html_as_txt += "</div>";
+
+					//
+					return this.menu_html_as_txt ;
+				}
+
+
+
+
+
+
+				/* and add some interactivity to the drop down menu */
+
+				this.bind_interactive_options_to_menu = function( root_this_ ){
+
+					console.log(">>>> bind_interactive_options_to_menu() ");
+
+					$("#"+"page_header__menu_button_box" ).click( function(){
+
+						console.log('click!!!');
+
+						$( "#"+"menu__drop_down_menu__outer_outer_area" ).toggle();
+
+					});
+
+
+					$("#menu__click_to_close_menu_area__behind_slide_out_menu_area" ).click( function(){
+
+						console.log('click222222!!!');
+						
+						$( "#"+"menu__drop_down_menu__outer_outer_area" ).toggle();
+
+					});
+
+
+					//// and the icon explanation title
+
+					$("#"+"menu_item__icons_explanations").click( function(){
+
+						// toggle the icon explanations area 
+						$("#"+"icon_explanation_area__outer_outer").toggle();
+
+						// and also close this menu please
+						$( "#"+"menu__drop_down_menu__outer_outer_area" ).toggle();
+
+					});
+
+
+
+
+					//// for the input field
+
+					root_this_.diary_num_field_txt_area__dom_ref = 
+					$("#"+"menu_input_field_actual__input_field" );
+
+					root_this_.diary_num_field_txt_area__dom_ref.click( function(){
+
+						console.log("click inside the input field ");
+
+						/// if the search field text 
+						//		(still) has the default text
+						//		- then remove it
+						if( root_this_.diary_num_has_been_clicked === false ){
+
+							root_this_.diary_num_field_txt_area__dom_ref.val("");
+
+							root_this_.diary_num_has_been_clicked = true;
+
+						}else{
+							// if the search field has a text different than
+							//	the default search field text
+							//	... then just leave it.
+						}
+
+					});
+
+
+					//// search box :  catch the returns/enters
+					///
+					root_this_.diary_num_field_txt_area__dom_ref.keypress( function( event ){
+			  				if ( event.which == 13 ) {
+							     event.preventDefault();
+
+							    root_this_.diary_num_field__current_search_string = $(this).val();
+							    console.log("omg omg omg ENTER PRESS!!!  --- >"+root_this_.diary_num_field__current_search_string+"< -- waaaauw!" );
+
+								// generate a new url
+								this.new_url = "http://knapek.org/temp/tampere_d3_workshop/v2/open_decisions_jquery__quick_mobile_test23__orientation_change_latest.html?issuenum="+root_this_.diary_num_field__current_search_string+"&lang="+root_this_.current_language_code;
+
+								// and load it
+								window.location.href = this.new_url;
+
+							    /// start the filtering process ith
+							    //		(with the current text string)
+								////  root_this_.start_filtering_and_commitments_listing_process__given_user_interaction__table_edition( root_this_, true );
+							     
+							  }
+			  			});
+
+					/// and then action from the click on the search icon
+					$("#"+"menu_input_field__search_button").click( function(){
+
+							    root_this_.diary_num_field__current_search_string = root_this_.diary_num_field_txt_area__dom_ref.val();
+							    console.log("omg omg omg ENTER PRESS!!!  --- >"+root_this_.diary_num_field__current_search_string+"< -- waaaauw!" );
+
+								// generate a new url
+								this.new_url = "http://knapek.org/temp/tampere_d3_workshop/v2/open_decisions_jquery__quick_mobile_test23__orientation_change_latest.html?issuenum="+root_this_.diary_num_field__current_search_string+"&lang="+root_this_.current_language_code;
+
+								// and load it
+								window.location.href = this.new_url;						
+					} );
+
+
+
+				}
+
+
+
+
+
+
+
+
+				/* --- generate the div/area with the icon explanations --- */
+
+
+				this.generate_icon_explanation_area = function( root_this_ ){
+
+					console.log(">>>> generate_icon_explanation_area() ");
+
+
+					///// start the html text
+					this.icon_explanation_html_as_txt = "";
+
+					/// add the outer area - i.e. the one that covers the whole screen
+					this.icon_explanation_html_as_txt += "<div id='"+"icon_explanation_area__outer_outer"+"'>";
+
+					/// add a close box 
+					this.icon_explanation_html_as_txt += "<div id='"+"icon_explanation_area__header_outer__header__close_button"+"'></div>";
+
+					/// add the enclosure of the header & icon explanation listing
+					//		( can be good if we need to center that below on a page somewhere)
+					this.icon_explanation_html_as_txt += "<div id='"+"icon_explanation_area__enclosure_of_header_and_icon_explanation_listing"+"'>";
+
+					/// add the header area
+					this.icon_explanation_html_as_txt += "<div id='"+"icon_explanation_area__header_outer"+"'><div id='"+"icon_explanation_area__header_outer__header_txt_area"+"'>Icon explanation area</div></div>";
+
+
+
+					/// add the icon explanation area
+					this.icon_explanation_html_as_txt += "<div id='"+"icon_explanation_area__actual_icon_explanation_area_outer"+"'>";
+
+					// LOOOOOP!
+					///// generate all the entries that go into the icon explanation area!
+					for( this.curr_icon_explanation_entry_i = 0; this.curr_icon_explanation_entry_i < root_this_.resolution_types__as_linear_list.length; this.curr_icon_explanation_entry_i++ ){
+
+						//// add the entry text for each explanation
+						//		- don't forget the multilinguial aspect
+
+						//// start : open the icon explanation entry item
+						this.icon_explanation_html_as_txt += "<div class='"+"individual_icon_explanation_entry__outer"+"'>";
+
+			
+
+						//// TO-DO: add the div/part with the relevant icon
+						this.icon_explanation_html_as_txt += "<i class='resolution_icon fa fa-"+this.RESOLUTIONS_ICONS[ root_this_.resolution_types__as_linear_list[ this.curr_icon_explanation_entry_i ] ]+" fa-3x'></i>" ;
+
+						//// TO-DO: add the part with the explanatory text
+						//				… in a multilinguial fashion, please
+
+						//// TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD
+						//// TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD
+						//     			- PLEASE CHANGE THIS LATER!
+						this.icon_explanation_html_as_txt += "<p>"+root_this_.resolution_explanation_texts_as_multilinguial_dictionary[ root_this_.current_language_code ][ root_this_.resolution_types__as_linear_list[ this.curr_icon_explanation_entry_i ] ]+"</p>";
+						//// TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD
+						//// TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD   TEST ADD	
+
+
+
+						//// finish : close the icon explanation entry item
+						this.icon_explanation_html_as_txt += "</div>";
+
+					}
+
+
+					/// close the icon explanation area listing area
+					this.icon_explanation_html_as_txt += "</div>";
+
+
+
+					/// close the header + icon explanation listing enclosure
+					this.icon_explanation_html_as_txt += "</div>";
+
+					/// close the outer outer area
+					this.icon_explanation_html_as_txt += "</div>";
+
+
+
+					////// insert the generated html into the html body :)
+					$( "body" ).append( this.icon_explanation_html_as_txt );
+				};
+
+
+
+				//// and the interactive functions of the above
+
+
+				this.bind_interactive_options_to_icon_explanation_page = function( root_this_ ){
+
+					console.log(">>>>>>>>>  bind_interactive_options_to_icon_explanation_page()");
+
+
+					// what about that close button?!
+					//// toggles the whole area
+					$("#"+"icon_explanation_area__header_outer__header__close_button").click( function(){
+
+						$("#"+"icon_explanation_area__outer_outer").toggle();
+
+					});
+				}
+
+
+
+
+				/* ---  update page header --- */
+
+
+
+				//////////   
+				//////////		update the page header test
+
+				this.update_page_header_text__portrait_mode = function( root_this_ ){
+
+					console.log(">>>> update_page_header_text__portrait_mode of curr_agenda_item_data :");
+					console.log( root_this_.issue_data_ );
+
+					$("#page_header__main_text_area").html( "<span id='page_header__issue_text_markup'>"+root_this_.strings_dictionary_multilinguial[ root_this_.current_language_code ].issue+" #"+root_this_.issue_data_.objects[0].issue.id+"</span> : "+root_this_.issue_data_.objects[0].issue.subject );
+
+				}
+
+
+
+
+				/* ---   meeting listings area  --- */
+
+
+				//////////   
+				//////////		add individual meeting listing 
+
+				this.add_individual_meeting_listing__portrait_mode = function( root_this, curr_agenda_item_data ){
+
+					console.log(">>>> add_individual_meeting_listing__portrait_mode ");
+
+					// find the relevant policymaker icon html
+					this.curr_relevant_policymaker_icon_html_entry = "<i class='"+this.find_relevant_icon_class_name_given_meeting_object( curr_agenda_item_data.meeting )+"'></i>";
+
+					/////  console.log( "curr resolution icon class === |"+this.find_relevant_icon_class_name_given_meeting_object( curr_agenda_item_data.meeting )+"|" );
+
+					/////  console.log( "curr resolution icon html === |"+this.curr_relevant_policymaker_icon_html_entry+"|" );
+
+
+					///  find the relevant icon html
+					this.relevant_resolution_icon = "<i class='resolution_icon fa fa-"+this.RESOLUTIONS_ICONS[ curr_agenda_item_data.resolution ]+" fa-3x'></i>" ;
+
+
+					//////  generate the inner div text
+					////  this.inner_txt_div = "<div class='individual_meetings_listing__inner_text_area'>"+curr_agenda_item_data.meeting.date+" : <span class='bolder_text_weight'>"+curr_agenda_item_data.meeting.policymaker_name+"</span><br/>Category : <span class='bolder_text_weight'>"+curr_agenda_item_data.issue.category_name+"</span> <br/>Resolution : <span class='bolder_text_weight'>"+this.RESOLUTIONS_EN[ curr_agenda_item_data.resolution ]+"</span> | "+this.curr_relevant_policymaker_icon_html_entry+" | "+this.relevant_resolution_icon+" |</div>";
+
+					this.inner_inner_meeting_div_text_area = "<div class='inner_inner_meeting_div_text_area'>"+window.moment( curr_agenda_item_data.meeting.date ).format( "LL" )+"<br/><span class='bolder_text_weight'>"+curr_agenda_item_data.meeting.policymaker_name+"</div>";
+
+
+
+					console.log("- locale date printing test ->  input date: |"+curr_agenda_item_data.meeting.date+"| output daet : |"+moment( curr_agenda_item_data.meeting.date ).format( "LL" )+"|" );
+
+
+
+					this.inner_txt_div = "<div class='individual_meetings_listing__inner_text_area'>"+this.relevant_resolution_icon+""+this.inner_inner_meeting_div_text_area+"</div>";
+
+					///  this.inner_arrow_right_html_txt = "<div class='individual_meetings_listing__inner_arrowRight'></div>";
+					this.inner_arrow_right_html_txt = "";
+
+					this.inner_arrow_down_html_txt = "<div class='individual_meetings_listing__inner_arrowDown'></div>";
+
+
+					this.final_meeting_txt = "<a href='"+curr_agenda_item_data.permalink+"'><div class='individual_meetings_listing__outer_area'>"+this.inner_txt_div+""+this.inner_arrow_down_html_txt+"</div></a>";
+
+
+					//// and insert it into the meeting listing area
+					$("#meetings_listing_outer_area").append( this.final_meeting_txt );
+
+				}
+
+
+
+
+				/* --- add page footer --- */
+
+
+				this.add_meeting_listing_footer__portrait_mode = function( root_this_ ){
+
+					$("#meetings_listing_outer_area").append("<div id='meeting_listing_footer'></div>" );
+
+					// add the 'start' text and arrow to the meeting listing header
+					$( "#meeting_listing_footer" ).append( "<div id='"+"meeting_listing_footer__start_txt_n_arrow__outer_div"+"'><div id='meeting_listing_footer__arrow_up_inner_div'></div>"+root_this_.strings_dictionary_multilinguial[ root_this_.current_language_code ].start+"</div>" );
+
+				}
+
+
+
+
+
+
+
+				/* ---- ladscape mode page setups ---- */
+				/* ---- ladscape mode page setups ---- */
+				/* ---- ladscape mode page setups ---- */
+
+
+
+				/* - basic page setup for portrait mode - */
+
+				this.set_up_basic_page__landscape_mode = function( root_this_ ){
+
+					// 
+					console.log(">>>> set_up_basic_page__landscape_mode");
+					
+
+					/////////// the page header
+
+					// add the complete page outer
+					//// this.page_header_html = "<div id='page_outer__landscape'>";
+					this.page_header_html = "<div id='page_outer_outer__landscape'>";
+
+
+					// add the header outer area
+					this.page_header_html += "<div id='header__landscape'>";			
+
+					// add the text area 
+					this.page_header_html += "<div id='header__text_area__landscape'>"
+
+					// add the issue number markup/area
+					this.page_header_html += "<span id='issue_num'>loading issue</span>";
+
+					// add the issue text markup/area
+					this.page_header_html += "<span id='page_header__issue_text_markup'>____ loading issue text</span>";
+
+					// close the text area
+					this.page_header_html += "</div>";
+
+					// add the drop down menu?
+					//  this.page_header_html += "<div id='page_header__menu_button_box'><div class='page_header__menu_button_box__inner_horizontal_bars'></div><div class='page_header__menu_button_box__inner_horizontal_bars'></div><div class='page_header__menu_button_box__inner_horizontal_bars'></div> "+root_this_.generate_drop_down_menu_html()+" </div>"
+
+					//
+					///////// this.page_header_html += "<div id='page_header__menu_button_box'><div class='page_header__menu_button_box__inner_horizontal_bars'></div><div class='page_header__menu_button_box__inner_horizontal_bars'></div><div class='page_header__menu_button_box__inner_horizontal_bars'></div> "+root_this_.generate_drop_down_menu_html_02()+" </div>"
+					this.page_header_html += "<div id='page_header__menu_button_box'><div class='page_header__menu_button_box__inner_horizontal_bars'></div><div class='page_header__menu_button_box__inner_horizontal_bars'></div><div class='page_header__menu_button_box__inner_horizontal_bars'></div></div>"+root_this_.generate_drop_down_menu_html_02();
+
+					// close the header
+					this.page_header_html += "</div>";
+
+
+
+
+					////////// the bottom part
+
+
+					///  this.page_header_html = "";
+
+
+					///// add the bottom outer area
+					this.page_header_html += "<div id='bottom_outer_area__landscape'>";
+
+
+					/// add the left (first meeting) area
+					this.page_header_html += "<div id='left_first_meeting_area_outer'>";
+
+					// add left/first meeting area : icon area
+					this.page_header_html += "<div id='left_first_meeting__inner_image_area'></div>";
+
+					// add left/first meeting area : txt area outer
+					this.page_header_html += "<div class='text_area_outer'>";
+
+					// add left/first meeting area : date span
+					this.page_header_html += "<span class='text_area__date_span'>date goes here</span>";
+
+					//  add a line break
+					this.page_header_html += "<br/>";
+
+					// add left/first meeting area : policymaker span
+					this.page_header_html += "<span class='text_area__policymaker_span bolder_text_weight'>policymaker goes here</span>";
+
+					/// close the first meeting/left txt area outer
+					this.page_header_html += "</div>";
+
+					/// close the first meeting/left outer area 
+					this.page_header_html += "</div>";
+
+
+
+					//////  add the middle (??? mystery ???) area
+
+					/// the middle area outer
+					this.page_header_html += "<div id='middle_area__outer'>";
+
+					/// add the arrow right line + close it 
+					this.page_header_html += "<div id='middle_area__arrow_right_line_only'></div>";
+
+					/// add the arrow right arrow head + close it 
+					this.page_header_html += "<div id='middle_area__arrow_right_arrowHead_only'></div>";					
+					/// CLOSE the middle area
+					this.page_header_html += "</div>";
+
+
+					///////  add the right/last meeting area 
+
+					/// add the right (last meeting) area outer
+					this.page_header_html += "<div id='right_last_meeting_area_outer'>";
+
+					// add right/last meeting area : icon area
+					this.page_header_html += "<div id='right_last_meeting__inner_image_area'></div>";
+
+					// add right/last meeting area : txt area outer
+					this.page_header_html += "<div class='text_area_outer'>";
+
+					// add right/last meeting area : date span
+					this.page_header_html += "<span class='text_area__date_span'>date goes here</span>";
+
+					//  add a line break
+					this.page_header_html += "<br/>";
+
+					// add right/last meeting area : policymaker span
+					this.page_header_html += "<span class='text_area__policymaker_span bolder_text_weight'>policymaker goes here</span>";
+
+					/// close the right/last meeting txt area outer
+					this.page_header_html += "</div>";
+
+					/// close the right/last meeting outer area 
+					this.page_header_html += "</div>";
+
+
+					////// close the bottom outer area
+					this.page_header_html += "</div>";
+
+					/////////// close the page outer
+					this.page_header_html += "</div>";
+
+
+					///////$( "body" ).append("<div id='"+"page_header__fixed__portrait_mode"+"'><div ");
+
+
+					//// append something nice
+					$( "body" ).append( this.page_header_html );
+
+
+
+
+
+
+
+					/// generate the area with the icon explanations
+					root_this_.generate_icon_explanation_area( root_this_ );
+
+					///// the outer area for the meeting listing
+					////   /////////   root_this_.set_up_menu();		
+					root_this_.bind_interactive_options_to_menu( root_this_ );
+
+					// and bind some interactive options to it
+					root_this_.bind_interactive_options_to_icon_explanation_page( root_this_ );
+
+				}
+
+
+
+
+				/* - update page content for the landscape mode */
+
+				this.update_page_content___for_landscape_mode = function( root_this_ ){
+
+					console.log(">>>>> update_page_content___for_landscape_mode() ");
+
+
+					/// update the header text please
+					root_this_.update_page_header_text__landscape_mode( root_this_ );
+
+					/// update the meetings texts
+					root_this_.update_first_and_last_meeting_data___in_landscape_mode( root_this_ );
+
+				}
+
+
+
+
+
+				/* - update the header text for the landscape more - */
+
+				this.update_page_header_text__landscape_mode = function( root_this_ ){
+
+					console.log(">>>> update_page_header_text__landscape_mode of curr_agenda_item_data :");
+
+					// update the issue num
+					$("#issue_num").html( root_this_.strings_dictionary_multilinguial[ root_this_.current_language_code ].issue+" #"+root_this_.issue_data_.objects[0].issue.id+"&nbsp;" );
+
+					// update the issue text
+					$("#page_header__issue_text_markup").text( root_this_.issue_data_.objects[0].issue.subject );
+					
+				}
+
+
+
+
+				/* - update the first and last meeting in landscape mode - */
+
+				this.update_first_and_last_meeting_data___in_landscape_mode = function( root_this_ ){
+
+					console.log(">>>> update_first_and_last_meeting_data___in_landscape_mode() ");
+
+
+					////////////////  update the first and last meeting areas
+
+
+					///////
+					///////  the first meeting 
+					///////
+
+
+					// select the left / right meeting areas
+
+					//// modify the left resolution image
+					$("#left_first_meeting__inner_image_area").html( "<i class='resolution_icon fa fa-"+root_this_.RESOLUTIONS_ICONS[ root_this_, root_this_.issue_data_.objects[ 0 ].resolution ]+" fa-5x'></i>" );
+
+					//// modify the left texts
+
+					this.left_meeting_area_outer = $("#left_first_meeting_area_outer");
+
+					this.left_meeting_area__txt_area_outer = this.left_meeting_area_outer.find( ".text_area_outer");
+
+					this.left_meeting_area__txt_area__date_txt_area = this.left_meeting_area__txt_area_outer.find(".text_area__date_span");
+					// test change text
+					this.left_meeting_area__txt_area__date_txt_area.text( window.moment( root_this_.issue_data_.objects[ 0 ].meeting.date ).format( "LL" )  );
+
+					this.left_meeting_area__txt_area__policymaker_txt_area = this.left_meeting_area__txt_area_outer.find(".text_area__policymaker_span");
+					// test change text
+					this.left_meeting_area__txt_area__policymaker_txt_area.text( root_this_.issue_data_.objects[ 0 ].meeting.policymaker_name );
+
+
+					///////
+					///////  the last meeting 
+					///////
+
+
+					//// modify the left resolution image
+					$("#right_last_meeting__inner_image_area").html( "<i class='resolution_icon fa fa-"+root_this_.RESOLUTIONS_ICONS[ root_this_, root_this_.issue_data_.objects[ root_this_.issue_data_.objects.length-1 ].resolution ]+" fa-5x'></i>" );
+
+
+					////// modify the right texts
+
+					// just to look this up 
+					this.last_meeting_num = root_this_.issue_data_.objects.length-1;
+
+
+					this.right_meeting_area_outer = $("#right_last_meeting_area_outer");
+
+					this.right_meeting_area__txt_area_outer = this.right_meeting_area_outer.find( ".text_area_outer");
+
+					this.right_meeting_area__txt_area__date_txt_area = this.right_meeting_area__txt_area_outer.find(".text_area__date_span");
+					// test change text
+					this.right_meeting_area__txt_area__date_txt_area.text( window.moment( root_this_.issue_data_.objects[ this.last_meeting_num ].meeting.date ).format( "LL" )  );
+
+					this.right_meeting_area__txt_area__policymaker_txt_area = this.right_meeting_area__txt_area_outer.find(".text_area__policymaker_span");
+					// test change text
+					this.right_meeting_area__txt_area__policymaker_txt_area.text( root_this_.issue_data_.objects[ this.last_meeting_num ].meeting.policymaker_name );					
+
+
+				}
+
+
+
+
+
+
+
+
+				/* ---- data methods --- */
+				/* ---- data methods --- */
+				/* ---- data methods --- */
+
+
+
+				/* ---	find the relevant icon name for a given policymaker  --- */
+
+
+				this.find_relevant_icon_class_name_given_meeting_object = function( relev_meeting_obj ){
+
+					// 
+					console.log( ">>>>> find_relevant_icon_class_name_given_meeting_object" );
+
+					/// how to…?
+
+					//// find the relevant policymaker, from the meeting data, /
+					//	in the policymaker data
+
+					var relevant_policymaker_abbreviation = "";
+
+					this.policymaker_data_.objects.map( function( individual_policymaker_data ){
+						if( individual_policymaker_data.resource_uri === relev_meeting_obj.policymaker ){
+
+							//////  console.log(" comparing the meeting data's policymaker name |"+relev_meeting_obj.policymaker+"| policymaker data with the policymaker data policymaker name |"+individual_policymaker_data.resource_uri+"| which has the abbreviation |"+individual_policymaker_data.abbreviation+"|" );
+
+							relevant_policymaker_abbreviation = individual_policymaker_data.abbreviation ;
+						}
+					});
+
+					// debug
+					//// console.log(" the abbreviation of policymaker |"+relev_meeting_obj.policymaker.policymaker_name+"| is |"+relevant_policymaker_abbreviation+"|" );
+					//// console.log("---- reprint of the policymaker abbreviation |"+relevant_policymaker_abbreviation+"|");
+
+
+					//// find the abbreviation for the relvant policymaker
+
+					//// find the relevant icon given the abbereviation
+					this.curr_relev_icon_class_name = "fa fa-"+this.POLICYMAKERS_icons[ relevant_policymaker_abbreviation ];
+
+					//
+					console.log(" the relevant policymaker icon is "+this.curr_relev_icon_class_name );
+
+					return this.curr_relev_icon_class_name;
+
+				}
+
+
+
+
+				/* ----------   text for differnet languages ---------  */
+
+
+				///// template for a dictionary of one language
+				//
+				this.text_dictionary_for_one_language = function(){
+
+					// which language
+					this.language = "en";
+
+					///////   strings
+
+					this.start = "Start";
+
+					this.meetings = "Meetings";
+
+					this.issue = "Issue";
+				}
+
+
+
+				//// a function to instantiate the different lagnuages
+				//
+
+				this.set_up_langauge_dictionaries = function(){
+
+					console.log(">>>> set_up_langauge_dictionaries() for  ");
+
+					////  instantiate the different dictionary objects in the main dictionary object 
+
+					// the english version
+					this.strings_dictionary_multilinguial[ this.dictionary_reference_for__language__english ] = new this.text_dictionary_for_one_language();
+
+					// the finnish version
+					this.strings_dictionary_multilinguial[ this.dictionary_reference_for__language__finnish ] = new this.text_dictionary_for_one_language();
+
+					// the swedish version
+					this.strings_dictionary_multilinguial[ this.dictionary_reference_for__language__swedish ] = new this.text_dictionary_for_one_language();
+
+
+					/////  update the dictionaries for the different languages
+
+					// finnish
+					this.strings_dictionary_multilinguial[ this.dictionary_reference_for__language__finnish ].start = "Vireilletulo";
+					this.strings_dictionary_multilinguial[ this.dictionary_reference_for__language__finnish ].meetings = "Käsittelyajankohdat";
+					this.strings_dictionary_multilinguial[ this.dictionary_reference_for__language__finnish ].issue = "Asia";
+
+					// swedish
+					this.strings_dictionary_multilinguial[ this.dictionary_reference_for__language__swedish ].start = "Start";
+					this.strings_dictionary_multilinguial[ this.dictionary_reference_for__language__swedish ].meetings = "Möten";
+					this.strings_dictionary_multilinguial[ this.dictionary_reference_for__language__swedish ].issue = "Sak";
+
+				}
+
+
+
+
+
+				//////////  set the date text localisation
+				///
+
+				this.set_up_date_language_localisation = function( root_this_ ){
+
+					console.log(">>>>>>>  set_up_date_language_localisation() - the current language code is |"+root_this_.current_language_code+"|" );
+
+					window.moment.locale( root_this_.current_language_code );
+
+					console.log("\t - the moment.js language local is set to |"+window.moment.locale()+"|" );
+
+				}
+
+
+
+
+
+				/////  set the right language according to the url
+				//
+
+				this.set_relevant_lang_according_to_url = function( root_this_ ){
+
+					console.log(">>>> set_relevant_lang_according_to_url() ");
+
+					try{
+						root_this_.current_language_code = $.urlParam( this.language_url_in_the_url );
+						console.log(">>>> language from url succeeded - using the following language ("+root_this_.current_language_code+")");
+
+						////// check whether it's one of the valid languages, else default to some language
+						this.found_valid_language_in_url = false;
+
+						// loop through the valid choices and check
+						for( key in this.strings_dictionary_multilinguial ){
+
+							console.log("- finding if the current url encoded language code ("+root_this_.current_language_code +") corresonds to the current used valid language code ("+key+")" );
+
+							// check if the current used valid language corresponds to the language encoded in the url
+							if( key === root_this_.current_language_code ){
+								this.found_valid_language_in_url = true;
+
+								/// set the date text format according to the found languaeg
+								root_this_.set_up_date_language_localisation( root_this_ );
+
+								break;
+							}
+
+						}
+
+						if( this.found_valid_language_in_url === false){
+							root_this_.current_language_code = root_this_.current_language_code__default_language ;
+							console.log("arghh... the language in the url isn't amongst the accepted ones… ("+root_this_.current_language_code+") - using the default language ("+root_this_.current_language_code__default_language+")");
+						}
+
+
+
+
+					}
+					catch( e){
+						// if no language is found in the url, then default to the default language
+						console.log(">>>> language from url fetch failed - using the default language ("+root_this_.current_language_code+")");
+					}
+
+				}
+
+
+
+
+
+				//////////////////
+				//////////////////    data loading - main
+				////////
+
+
+				this.initialise_page__load_data__and__initialise_setup = function( root_this_ ){
+
+					console.log(">>>>  initialise_page__load_data__and__initialise_setup() ");
+
+
+					// detect the orientation
+
+					root_this_.fetch_current_device_orientation_mode( root_this_ );
+
+
+					// make the page
+					/// root_this_.set_up_basic_page__portrait_mode( root_this_ );	
+					root_this_.set_up_basic_page__depending_on_orientation_mode( root_this_ );
+
+
+					/////   try finding the issue num from the url and generate a data-fetching url based on the issue num
+					// 
+					root_this_.issue_num = 949;
+					var url;
+
+
+					/// fetch the parameters from the url
+					try{
+						root_this_.issue_num = $.urlParam("issuenum");
+						url = "http://dev.hel.fi/paatokset/v1/agenda_item/?limit=1000&issue="+root_this_.issue_num;
+						console.log(" root_this_.issue_num === "+root_this_.issue_num );
+					}
+					catch(e){
+						console.log(" url reading is bugging out ;(* - error :"+e );
+					}
+
+					/// load the data 
+					root_this_.load_data__and__update_page( root_this_, url );
+					
+				}
+
+
+
+				/////////////////
+				/////////////////	data loading - lower level
+				/////////////////
+
+
+				this.load_data__and__update_page = function( root_this_, url ){
+
+					console.log(">>>>> load_data__and__update_page() of url |"+url+"|");
+					console.log("\t - root_this_ === "+root_this_ );
+
+
+					/////   get the issue data				
+					$.get( url, function( issue_data ){
+
+						// assign the data to a local variable
+						root_this_.issue_data_ = issue_data;				
+						
+						// get a listing of all the policymakers
+						//		( this helps with fetching relevant icons )
+						$.get( "http://dev.hel.fi/paatokset/v1/policymaker/?limit=10000", function( policymakers_data ){
+
+							// assign the data to a local variable
+							root_this_.policymaker_data_ = policymakers_data;
+
+							// debug
+							console.log("just got a list of policymakers - yay! -> ");
+							console.log( policymakers_data );
+
+
+							///  update the page content depending on the device orientation
+							//////  root_this_.update_page_content___for_portrait_mode( root_this_ );
+							root_this_.update_page_content_depending_on_orientation_mode( root_this_ )
+
+						})
+
+					});
+
+				}
+
+
+
+
+
+				///// the initial setup on initialising th eobject
+				//
+				/* ============   HELLOW - RUNME!    ========== */
+				/* ============   HELLOW - RUNME!    ========== */
+				/* ============   HELLOW - RUNME!    ========== */
+
+
+
+				console.log(" >>>> hello - setting up a mnobile interface object ");
+
+				///////////  	set up the language dictionaries
+				//
+				this.set_up_langauge_dictionaries();
+
+				//////////		set the date/time text localisatino using moment.js
+				//
+				/////////   this.set_up_date_language_localisation();
+
+				///////////  	(try) find the language from the url    
+				//
+				this.set_relevant_lang_according_to_url( this );
+
+				/// load the data 
+				this.initialise_page__load_data__and__initialise_setup( this );
+
+			}
+
+			
+
+
+
+
+
+			/* =========  runme   ========= */
+			
+			$( document ).ready( function(){
+
+				////////  $("body").append("<div id='hellow' style='display:none ; font-size:144px'>hellow!  <br/> - please enter a issue name in the url </div>");
+				
+				///////  setTimeout( function(){ $("#hellow").slideDown( 2000 ); }, 1000 );
+
+				//// set up the mobile_interface_object please ;)
+				window.our_mobile_interface = new mobile_interface();
+
+
+				/////
+				/////  TEST 
+				/////  TEST  - orientation change
+				/////  TEST
+				/////
+
+				$( window ).on( "orientationchange", function( event ) {
+				  	//// alert( "This device is in " + event.orientation + " mode!" );
+
+				  	// update the system level orientatino mode data/flag
+				  	window.our_mobile_interface.fetch_current_device_orientation_mode( window.our_mobile_interface );
+
+				  	// redraw things depending on the orientation mode
+				  	window.our_mobile_interface.redraw_page_content__on_orientation_change__depending_on_orientation_mode( window.our_mobile_interface );
+
+				  	console.log("---- orientation change : post reorient command sent ------- ");
+				});
+
+
+			});
+
+
+
+
+
+			
+
+
+
+
+
+		</script>
+
+	</body>
+
+</html>
+
